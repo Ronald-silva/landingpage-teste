@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ReactNode, CSSProperties } from 'react'
 import { clsx } from 'clsx'
 
 interface CardProps {
@@ -6,9 +6,10 @@ interface CardProps {
   className?: string
   hover?: boolean
   padding?: 'sm' | 'md' | 'lg'
+  style?: CSSProperties
 }
 
-export default function Card({ children, className, hover = false, padding = 'md' }: CardProps) {
+export default function Card({ children, className, hover = false, padding = 'md', style }: CardProps) {
   const paddingStyles = {
     sm: 'p-4',
     md: 'p-6',
@@ -23,6 +24,7 @@ export default function Card({ children, className, hover = false, padding = 'md
         paddingStyles[padding],
         className
       )}
+      style={style}
     >
       {children}
     </div>
