@@ -1,0 +1,10 @@
+# robots.txt para Dra. Lara Kheir Advocacia
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://landingpage-teste-gray.vercel.app/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

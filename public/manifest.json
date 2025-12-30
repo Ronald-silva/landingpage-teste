@@ -1,0 +1,23 @@
+{
+  "name": "Dra. Lara Kheir Advocacia - Especialista em Direito Trabalhista",
+  "short_name": "Dra. Lara Kheir",
+  "description": "Advocacia especializada em Direito Trabalhista, Previdenciário, Cível e Criminal",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a365d",
+  "theme_color": "#1a365d",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "legal"],
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}
