@@ -99,7 +99,7 @@ export default function Testimonials() {
                     <div className="font-semibold text-lg text-text-primary">
                       {testimonials[currentIndex].name}
                     </div>
-                    <div className="text-sm text-secondary">
+                    <div className="text-sm text-text-secondary">
                       {testimonials[currentIndex].area}
                     </div>
                   </div>
@@ -135,13 +135,18 @@ export default function Testimonials() {
                 setIsAutoPlaying(false)
                 setCurrentIndex(index)
               }}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex
-                  ? 'bg-secondary w-8'
-                  : 'bg-gray-300 hover:bg-gray-400'
-              }`}
+              className="min-w-[44px] min-h-[44px] flex items-center justify-center p-2 transition-all duration-300"
               aria-label={`Go to testimonial ${index + 1}`}
-            />
+              aria-current={index === currentIndex ? 'true' : 'false'}
+            >
+              <span
+                className={`rounded-full transition-all duration-300 ${
+                  index === currentIndex
+                    ? 'bg-secondary w-8 h-3'
+                    : 'bg-gray-300 hover:bg-gray-400 w-3 h-3'
+                }`}
+              />
+            </button>
           ))}
         </div>
       </div>

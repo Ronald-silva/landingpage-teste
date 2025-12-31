@@ -112,57 +112,65 @@ export default function Calculator() {
             <form onSubmit={handleCalculate} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-semibold text-text-primary mb-2">
+                  <label htmlFor="admissionDate" className="block text-sm font-semibold text-text-primary mb-2">
                     Data de Admissão *
                   </label>
                   <input
                     type="date"
+                    id="admissionDate"
                     name="admissionDate"
                     value={formData.admissionDate}
                     onChange={handleInputChange}
                     required
+                    aria-required="true"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-text-primary mb-2">
+                  <label htmlFor="dismissalDate" className="block text-sm font-semibold text-text-primary mb-2">
                     Data de Demissão *
                   </label>
                   <input
                     type="date"
+                    id="dismissalDate"
                     name="dismissalDate"
                     value={formData.dismissalDate}
                     onChange={handleInputChange}
                     required
+                    aria-required="true"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-text-primary mb-2">
+                  <label htmlFor="salary" className="block text-sm font-semibold text-text-primary mb-2">
                     Salário Bruto (R$) *
                   </label>
                   <input
                     type="text"
+                    id="salary"
                     name="salary"
                     value={formData.salary ? `R$ ${formData.salary}` : ''}
                     onChange={handleInputChange}
                     placeholder="R$ 0,00"
                     required
+                    aria-required="true"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-text-primary mb-2">
+                  <label htmlFor="dismissalReason" className="block text-sm font-semibold text-text-primary mb-2">
                     Motivo da Demissão *
                   </label>
                   <select
+                    id="dismissalReason"
                     name="dismissalReason"
                     value={formData.dismissalReason}
                     onChange={handleInputChange}
                     required
+                    aria-required="true"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all bg-white"
                   >
                     <option value="">Selecione...</option>

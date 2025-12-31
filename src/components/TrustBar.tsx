@@ -38,9 +38,9 @@ export default function TrustBar() {
               <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center shadow-md">
                 <feature.icon className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-semibold text-sm md:text-base text-text-primary">
+              <div className="font-semibold text-sm md:text-base text-text-primary">
                 {feature.title}
-              </h3>
+              </div>
               <p className="text-xs text-text-secondary hidden md:block">
                 {feature.description}
               </p>
