@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="bg-primary text-white">
       {/* Main Footer Content */}
       <Container className="py-12 md:py-16">
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-12">
           {/* Column 1 - Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
@@ -139,17 +139,13 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <Container className="py-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-white/60 text-center md:text-left">
-            <div>
-              <p>
-                © {currentYear} Dra. Lara Kheir Advocacia. Todos os direitos reservados.
-              </p>
-            </div>
-            <div className="md:text-right">
-              <p className="text-xs">
-                Desenvolvido com excelência
-              </p>
-            </div>
+          <div className="flex flex-col items-center justify-center gap-2 text-sm text-white/60 text-center">
+            <p>
+              © {currentYear} Dra. Lara Kheir Advocacia. Todos os direitos reservados.
+            </p>
+            <p className="text-xs">
+              Desenvolvido com excelência
+            </p>
           </div>
         </Container>
       </div>

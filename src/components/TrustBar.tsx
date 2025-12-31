@@ -28,7 +28,7 @@ export default function TrustBar() {
   return (
     <section className="bg-white border-y border-gray-200 py-8">
       <Container>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {features.map((feature, index) => (
             <div
               key={index}

@@ -108,10 +108,10 @@ export default function Testimonials() {
             </div>
           </Card>
 
-          {/* Navigation Arrows */}
+          {/* Navigation Arrows - Hidden on mobile */}
           <button
             onClick={goToPrevious}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-16 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 w-12 h-12 bg-white rounded-full shadow-xl items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -119,7 +119,7 @@ export default function Testimonials() {
 
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-16 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 w-12 h-12 bg-white rounded-full shadow-xl items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-6 h-6" />

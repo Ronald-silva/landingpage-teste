@@ -16,7 +16,7 @@ export default function AboutSection() {
 
   return (
     <Section background="white" id="sobre">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* Left Column - Image */}
         <div className="order-2 lg:order-1">
           <div className="relative">

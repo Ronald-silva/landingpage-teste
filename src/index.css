@@ -13,6 +13,32 @@
   }
 }
 
+/* Prevent horizontal overflow */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure all sections stay within viewport */
+section,
+div[class*="grid"],
+div[class*="flex"] {
+  max-width: 100%;
+}
+
+/* Prevent images and media from overflowing */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
