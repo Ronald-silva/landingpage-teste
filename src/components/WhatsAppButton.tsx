@@ -45,7 +45,7 @@ export default function WhatsAppButton() {
   return (
     <>
       {/* WhatsApp Floating Button */}
-      <div className="fixed bottom-6 right-6 z-50 group">
+      <div className="fixed bottom-20 right-4 md:bottom-8 md:right-6 z-50 group">
         {/* Tooltip */}
         {showTooltip && (
           <div className="absolute bottom-full right-0 mb-4 animate-slide-up">

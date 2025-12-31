@@ -139,13 +139,17 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <Container className="py-6">
-          <div className="flex flex-col justify-center items-center gap-2 text-sm text-white/60 text-center">
-            <p>
-              © {currentYear} Dra. Lara Kheir Advocacia. Todos os direitos reservados.
-            </p>
-            <p className="text-xs">
-              Desenvolvido com excelência
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-white/60 text-center md:text-left">
+            <div>
+              <p>
+                © {currentYear} Dra. Lara Kheir Advocacia. Todos os direitos reservados.
+              </p>
+            </div>
+            <div className="md:text-right">
+              <p className="text-xs">
+                Desenvolvido com excelência
+              </p>
+            </div>
           </div>
         </Container>
       </div>

@@ -24,27 +24,60 @@ export default function HeroSection() {
       </div>
 
       <Container className="relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Content */}
+        <div className="max-w-4xl mx-auto">
+          {/* Content */}
           <div className="text-white space-y-8 animate-fade-in">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
-              <span className="w-2 h-2 bg-secondary rounded-full animate-pulse-subtle"></span>
-              <span className="text-sm font-medium">OAB/MG - Especialista Direito Trabalhista</span>
+            {/* Profile Header - Photo + Name + Credentials */}
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+              {/* Profile Photo */}
+              <div className="relative flex-shrink-0">
+                <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-secondary overflow-hidden bg-white shadow-2xl">
+                  <img
+                    src="/perfil.png"
+                    alt="Dra. Lara Kheir - Advogada Trabalhista"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                {/* Rating Badge */}
+                <div className="absolute -bottom-2 -right-2 bg-white px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
+                  <svg className="w-4 h-4 fill-secondary text-secondary" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <span className="text-xs font-bold text-primary">5.0</span>
+                </div>
+              </div>
+
+              {/* Profile Info */}
+              <div className="flex-1 text-center sm:text-left space-y-3">
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-heading font-bold mb-1">
+                    Dra. Lara Kheir
+                  </h2>
+                  <p className="text-white/90 text-base md:text-lg">
+                    Advogada Especialista em Direito Trabalhista
+                  </p>
+                </div>
+
+                {/* Credentials Badge */}
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                  <span className="w-2 h-2 bg-secondary rounded-full animate-pulse-subtle"></span>
+                  <span className="text-sm font-medium">OAB/MG - Especialista</span>
+                </div>
+              </div>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight text-center sm:text-left">
               Seus Direitos Trabalhistas Merecem a Melhor Defesa
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed text-center sm:text-left">
               Advocacia especializada com foco em resultados concretos. Atendimento em todo o Brasil.
             </p>
 
             {/* Social Proof */}
-            <div className="flex items-center gap-2 text-white/80">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
                   <div
@@ -55,13 +88,13 @@ export default function HeroSection() {
                   </div>
                 ))}
               </div>
-              <span className="text-sm font-medium">
+              <span className="text-sm font-medium text-white/80">
                 <strong className="text-secondary">2.247+</strong> pessoas confiam
               </span>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
               <Button
                 variant="whatsapp"
                 size="lg"
@@ -83,7 +116,7 @@ export default function HeroSection() {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap gap-6 text-sm text-white/70 pt-4">
+            <div className="flex flex-wrap justify-center sm:justify-start gap-6 text-sm text-white/70 pt-4">
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -104,40 +137,11 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-
-          {/* Right Column - Image */}
-          <div className="relative hidden lg:block animate-slide-up">
-            <div className="relative">
-              {/* Decorative Circle */}
-              <div className="absolute inset-0 bg-gradient-to-br from-secondary to-secondary-dark rounded-full blur-3xl opacity-20 animate-pulse-subtle"></div>
-
-              {/* Profile Image Container */}
-              <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <div className="aspect-square rounded-full bg-gradient-to-br from-white/20 to-white/5 p-2">
-                  <div className="w-full h-full rounded-full border-4 border-secondary overflow-hidden bg-white">
-                    <img
-                      src="/perfil.png"
-                      alt="Dra. Lara Kheir - Advogada Trabalhista"
-                      className="w-full h-full object-contain"
-                    />
-                  </div>
-                </div>
-
-                {/* Floating Badge */}
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white px-6 py-3 rounded-full shadow-xl">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">OAB/MG</div>
-                    <div className="text-xs text-text-secondary">Especialista</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </Container>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      {/* Scroll Indicator - Hidden on mobile */}
+      <div className="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
           <div className="w-1 h-3 bg-white/50 rounded-full"></div>
         </div>
